@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" role="img" aria-label="H &amp; M Carpet Care">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dcecf8"/></linearGradient></defs>
+<ellipse cx="150" cy="60" rx="144" ry="54" fill="url(#g)" stroke="#000482" stroke-width="6"/>
+<ellipse cx="150" cy="60" rx="135" ry="45" fill="none" stroke="#000482" stroke-width="2.2"/>
+<text x="150" y="53" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="40" fill="#000482" letter-spacing="1">H &amp; M</text>
+<text x="150" y="90" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-style="italic" font-size="35" fill="#000482">Carpet Care</text>
+</svg>
