@@ -204,16 +204,24 @@ nav.main a:hover{border-color:var(--aqua)}
 
 /* ───────── service area ───────── */
 .area{position:relative;overflow:hidden;background:var(--foam);padding:clamp(70px,9vw,120px) 0}
-.area .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(30px,6vw,90px);align-items:center}
-.area h2{font-weight:800;font-size:clamp(2.2rem,4.4vw,3.8rem);line-height:1;letter-spacing:-.03em;color:var(--navy)}
+.area .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(30px,5vw,80px);align-items:center}
+.area h2{text-wrap:balance;font-weight:800;font-size:clamp(2.2rem,4.4vw,3.8rem);line-height:1;letter-spacing:-.03em;color:var(--navy)}
 .area .health{margin-top:30px;background:#fff;border-radius:26px;padding:26px 28px;box-shadow:0 24px 50px -30px rgba(0,4,130,.5);font-family:var(--serif);font-size:1.18rem;line-height:1.55}
 .area .health p+p{margin-top:.7em;font-size:1.02rem;color:var(--muted)}
-.route{list-style:none;position:relative;padding:36px 36px 20px 82px;columns:2;column-gap:36px;background:#fff;border-radius:34px;box-shadow:0 40px 80px -40px rgba(0,4,130,.55)}
-.route li{position:relative;break-inside:avoid;padding:8px 0 22px;font-weight:800;font-size:clamp(1.2rem,2vw,1.65rem);letter-spacing:-.02em;color:var(--ink)}
-.route li::before{content:"";position:absolute;left:-46px;top:16px;width:18px;height:18px;border-radius:50%;background:#fff;border:5px solid var(--aqua);z-index:1}
-.route li::after{content:"";position:absolute;left:-38px;top:36px;bottom:-6px;width:3px;background:var(--sky)}
-.route li:last-child::after,.route li:nth-child(5)::after{display:none}
-.route li:first-child::before{background:var(--navy);border-color:var(--navy);width:24px;height:24px;left:-49px;top:13px}
+.hub{position:relative;list-style:none;aspect-ratio:1/1;width:100%;max-width:640px;justify-self:center;border-radius:42px;overflow:hidden;
+  background:
+   radial-gradient(circle at 50% 52%,rgba(47,177,240,.35),transparent 55%),
+   repeating-linear-gradient(0deg,rgba(23,113,176,.09) 0 1px,transparent 1px 46px),
+   repeating-linear-gradient(90deg,rgba(23,113,176,.09) 0 1px,transparent 1px 46px),
+   linear-gradient(160deg,#ffffff,#d9ecfa);
+  box-shadow:0 40px 80px -40px rgba(0,4,130,.6),inset 0 0 0 1px rgba(255,255,255,.9)}
+.hub svg{position:absolute;inset:0;width:100%;height:100%}
+.hub li{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;gap:8px;background:#fff;color:var(--ink);font-weight:700;font-size:clamp(.78rem,1.7vw,1.05rem);line-height:1;padding:10px 14px 10px 10px;border-radius:999px;box-shadow:0 14px 28px -14px rgba(0,4,130,.6);white-space:nowrap;transition:transform .25s,box-shadow .25s}
+.hub li:hover{transform:translate(-50%,-56%);box-shadow:0 22px 34px -14px rgba(0,4,130,.7)}
+.hub li::before{content:"";flex:none;width:18px;height:18px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--aqua);box-shadow:inset 0 0 0 5px var(--aqua),inset 0 0 0 9px #fff}
+.hub li.hq{z-index:2;flex-direction:column;gap:6px;padding:26px 30px;border-radius:50%;width:clamp(112px,26%,170px);aspect-ratio:1;justify-content:center;background:linear-gradient(145deg,var(--navy),var(--blue));color:#fff;font-size:clamp(1rem,2.3vw,1.45rem);text-align:center;box-shadow:0 0 0 10px rgba(255,255,255,.55),0 0 0 22px rgba(47,177,240,.25),0 26px 44px -16px rgba(0,4,130,.8)}
+.hub li.hq::before{width:22px;height:22px;background:#fff;box-shadow:inset 0 0 0 6px #fff,inset 0 0 0 11px var(--navy)}
+.hub li.hq:hover{transform:translate(-50%,-50%) scale(1.04)}
 
 /* ───────── call ───────── */
 .call{position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(6,16,58,.93),rgba(0,4,130,.8) 60%,rgba(23,113,176,.7)),url(images/hero-carpet.jpg) center/cover no-repeat;color:#fff;padding:clamp(70px,9vw,120px) 0}
@@ -266,8 +274,6 @@ footer .legal a{color:#fff;font-weight:700}
   .ticket{grid-template-columns:1fr;-webkit-mask:none;mask:none}
   .ticket .stub{border-left:0;border-top:3px dashed #b9d6ec}
   .t2,.t3,.t4,.t5,.t6,.t7,.t8{grid-column:span 12}
-  .route{columns:1}
-  .route li:nth-child(5)::after{display:block}
   .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--navy);padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));gap:10px}
   .mbar a{text-align:center;text-decoration:none;font-weight:700;color:#fff;padding:12px;border-radius:999px;border:2px solid #fff}
   .mbar a:first-child{background:#fff;color:var(--navy)}
@@ -277,7 +283,13 @@ footer .legal a{color:#fff;font-weight:700}
   .creds .it{border-left:0;border-top:1px solid #dbe8f3}
   .creds .it:first-child{border-top:0}
   footer .cols{grid-template-columns:1fr}
-  .route{padding-left:70px}
+}
+@media (max-width:560px){
+  .hub{aspect-ratio:4/5;border-radius:32px}
+  .hub li{padding:8px 11px 8px 8px;gap:6px}
+  .hub li::before{width:14px;height:14px;box-shadow:inset 0 0 0 4px var(--aqua),inset 0 0 0 7px #fff}
+  .hub li.hq{width:25%;padding:8px;font-size:.82rem;box-shadow:0 0 0 5px rgba(255,255,255,.55),0 0 0 11px rgba(47,177,240,.25),0 18px 30px -14px rgba(0,4,130,.8)}
+  .hub li.hq::before{width:16px;height:16px;box-shadow:inset 0 0 0 4px #fff,inset 0 0 0 7px var(--navy)}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -554,9 +566,7 @@ footer .legal a{color:#fff;font-weight:700}
         <p>Area rug pick up and drop off is available.</p>
       </div>
     </div>
-    <ol class="route" aria-label="Service areas">
-      <li>Edmonton</li><li>St. Albert</li><li>Sherwood Park</li><li>Fort Saskatchewan</li><li>Bruderheim</li><li>Lamont</li><li>Leduc</li><li>Spruce Grove</li><li>Stony Plain</li>
-    </ol>
+    <ul class="hub" aria-label="Service areas"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="#1771B0" stroke-opacity=".45" stroke-width="2" stroke-dasharray="6 7" stroke-linecap="round" vector-effect="non-scaling-stroke"><line vector-effect='non-scaling-stroke' x1="50" y1="52" x2="30" y2="25"/><line vector-effect='non-scaling-stroke' x1="50" y1="52" x2="69" y2="24"/><line vector-effect='non-scaling-stroke' x1="50" y1="52" x2="80" y2="10"/><line vector-effect='non-scaling-stroke' x1="50" y1="52" x2="84" y2="36"/><line vector-effect='non-scaling-stroke' x1="50" y1="52" x2="74" y2="66"/><line vector-effect='non-scaling-stroke' x1="50" y1="52" x2="54" y2="88"/><line vector-effect='non-scaling-stroke' x1="50" y1="52" x2="18" y2="50"/><line vector-effect='non-scaling-stroke' x1="50" y1="52" x2="20" y2="76"/></g><path d="M-5 70C20 60 30 80 55 66S90 50 105 58" fill="none" stroke="#fff" stroke-width="5" opacity=".7" vector-effect="non-scaling-stroke"/><path d="M30 -5C34 20 46 30 48 52S60 80 58 105" fill="none" stroke="#fff" stroke-width="5" opacity=".7" vector-effect="non-scaling-stroke"/></svg><li class="hq" style="left:50%;top:52%">Edmonton</li><li style="left:30%;top:25%">St. Albert</li><li style="left:69%;top:24%">Fort Saskatchewan</li><li style="left:80%;top:10%">Bruderheim</li><li style="left:84%;top:36%">Lamont</li><li style="left:74%;top:66%">Sherwood Park</li><li style="left:54%;top:88%">Leduc</li><li style="left:18%;top:50%">Spruce Grove</li><li style="left:20%;top:76%">Stony Plain</li></ul>
   </div>
 </section>
 
