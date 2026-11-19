@@ -131,7 +131,7 @@ nav.main a:hover{border-color:var(--aqua)}
 .tile:hover{transform:translateY(-6px);box-shadow:0 34px 60px -28px rgba(0,4,130,.7)}
 .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1s}
 .tile:hover img{transform:scale(1.07)}
-.tile::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--ov,linear-gradient(160deg,rgba(0,4,130,.2),rgba(3,9,52,.88)))}
+.tile::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--ov,linear-gradient(180deg,rgba(3,9,52,.06) 30%,rgba(3,9,52,.9)))}
 .tile .ico{width:60px;height:60px;border-radius:20px;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.35);display:grid;place-items:center}
 .tile .ico svg{width:30px;height:30px}
 .tile h3{font-weight:800;font-size:clamp(1.3rem,2vw,1.8rem);line-height:1.08;letter-spacing:-.02em}
@@ -139,13 +139,13 @@ nav.main a:hover{border-color:var(--aqua)}
 .tile .arr{position:absolute;right:22px;top:22px;width:46px;height:46px;border-radius:50%;background:#fff;color:var(--navy);display:grid;place-items:center;transition:transform .3s}
 .tile:hover .arr{transform:rotate(-45deg) scale(1.08)}
 .tile .arr svg{width:22px;height:22px}
-.t1{grid-column:span 5;grid-row:span 2;--ov:linear-gradient(170deg,rgba(23,113,176,.15),rgba(0,4,130,.9))}
+.t1{grid-column:span 5;grid-row:span 2}
 .t1 h3{font-size:clamp(1.8rem,3.4vw,3rem)}
-.t2{grid-column:span 4;--ov:linear-gradient(160deg,rgba(60,10,30,.2),rgba(20,6,40,.9))}
-.t3{grid-column:span 3;--ov:linear-gradient(160deg,rgba(23,113,176,.2),rgba(6,16,58,.88))}
-.t4{grid-column:span 3;--ov:linear-gradient(160deg,rgba(6,16,58,.3),rgba(6,16,58,.92))}
-.t5{grid-column:span 4;--ov:linear-gradient(160deg,rgba(90,60,30,.25),rgba(30,20,12,.9))}
-.t6{grid-column:span 4}.t7{grid-column:span 4;--ov:linear-gradient(160deg,rgba(47,177,240,.15),rgba(0,30,110,.85))}.t8{grid-column:span 4}
+.t2{grid-column:span 4}
+.t3{grid-column:span 3}
+.t4{grid-column:span 3}
+.t5{grid-column:span 4}
+.t6{grid-column:span 4}.t7{grid-column:span 4}.t8{grid-column:span 4}
 
 /* ───────── guarantee ticket ───────── */
 .promise{background:linear-gradient(135deg,var(--navy),#0a3fa6 55%,var(--blue));padding:clamp(70px,9vw,120px) 0;position:relative;overflow:hidden}
@@ -216,7 +216,7 @@ nav.main a:hover{border-color:var(--aqua)}
 .route li:first-child::before{background:var(--navy);border-color:var(--navy);width:24px;height:24px;left:-49px;top:13px}
 
 /* ───────── call ───────── */
-.call{position:relative;overflow:hidden;background:linear-gradient(135deg,#06103A,var(--navy) 60%,var(--blue));color:#fff;padding:clamp(70px,9vw,120px) 0}
+.call{position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(6,16,58,.93),rgba(0,4,130,.8) 60%,rgba(23,113,176,.7)),url(images/hero-carpet.jpg) center/cover no-repeat;color:#fff;padding:clamp(70px,9vw,120px) 0}
 .call h2{font-weight:500;font-size:clamp(1.3rem,2.2vw,1.8rem);color:#bcd6ec;max-width:28em}
 .call .num{display:block;white-space:nowrap;margin-top:14px;font-weight:800;font-size:clamp(2.4rem,10.5vw,9.5rem);line-height:.9;letter-spacing:-.05em;text-decoration:none;color:#fff;font-variation-settings:"opsz" 96;transition:color .2s;position:relative}
 .call .num:hover{color:var(--sky)}
@@ -343,6 +343,7 @@ footer .legal a{color:#fff;font-weight:700}
             <filter id="pd" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".5 .05" numOctaves="3" seed="4" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 .02  0 0 0 0 .18  2.4 0 0 0 -.55"/></filter>
             <filter id="pl" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".5 .05" numOctaves="3" seed="13" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 .85  0 0 0 0 .95  0 0 0 0 1  2.2 0 0 0 -.62"/></filter>
             <filter id="grime" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="3" seed="9" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 .36  0 0 0 0 .27  0 0 0 0 .14  2.6 0 0 0 -.75"/></filter>
+            <filter id="grime2" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".014" numOctaves="3" seed="9" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 .38  0 0 0 0 .33  0 0 0 0 .26  2.6 0 0 0 -.8"/></filter>
             <filter id="blob" x="-30%" y="-30%" width="160%" height="160%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="3" seed="6" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="46"/><feGaussianBlur stdDeviation="2"/></filter>
             <radialGradient id="vg" cx=".5" cy=".5" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#020830" stop-opacity=".55"/></radialGradient>
             <g id="base">
@@ -355,17 +356,15 @@ footer .legal a{color:#fff;font-weight:700}
             </g>
             <clipPath id="cp"><rect id="cr" x="0" y="0" width="280" height="700"/></clipPath>
           </defs>
-          <use href="#base"/>
+          <image href="images/svc-carpet.jpg" width="560" height="700" preserveAspectRatio="xMidYMid slice"/>
           <g clip-path="url(#cp)">
-            <use href="#base" style="filter:saturate(.45) brightness(.82)"/>
-            <rect width="560" height="700" filter="url(#grime)" opacity=".7" style="mix-blend-mode:multiply"/>
-            <g style="mix-blend-mode:multiply">
-              <ellipse cx="150" cy="210" rx="62" ry="48" fill="#5c1233" filter="url(#blob)" opacity=".9"/>
-              <ellipse cx="330" cy="430" rx="74" ry="56" fill="#c6a02a" filter="url(#blob)" opacity=".65"/>
-              <ellipse cx="170" cy="560" rx="58" ry="40" fill="#3d2d18" filter="url(#blob)" opacity=".8"/>
-              <ellipse cx="420" cy="170" rx="30" ry="46" fill="#3d2d18" filter="url(#blob)" opacity=".55"/>
-              <ellipse cx="90" cy="400" rx="26" ry="38" fill="#3d2d18" filter="url(#blob)" opacity=".5"/>
-            </g>
+            <image href="images/svc-carpet.jpg" width="560" height="700" preserveAspectRatio="xMidYMid slice" style="filter:saturate(.3) brightness(.95) contrast(.88)"/>
+            <rect width="560" height="700" filter="url(#grime2)" opacity=".6"/>
+            <ellipse cx="150" cy="210" rx="62" ry="48" fill="#8a1f48" filter="url(#blob)" opacity=".8"/>
+            <ellipse cx="335" cy="440" rx="74" ry="56" fill="#d9b94a" filter="url(#blob)" opacity=".6"/>
+            <ellipse cx="170" cy="565" rx="60" ry="40" fill="#b39b74" filter="url(#blob)" opacity=".75"/>
+            <ellipse cx="420" cy="170" rx="30" ry="46" fill="#a9b0b8" filter="url(#blob)" opacity=".55"/>
+            <ellipse cx="90" cy="400" rx="26" ry="38" fill="#a9b0b8" filter="url(#blob)" opacity=".5"/>
           </g>
           <rect width="560" height="700" fill="url(#vg)"/>
         </svg>
@@ -433,49 +432,49 @@ footer .legal a{color:#fff;font-weight:700}
     </div>
     <div class="bento">
       <a class="tile t1" href="http://www.handmcarpetcare.com/Services-Packages.html">
-        <img src="images/svc-carpet.svg" alt="" loading="lazy">
+        <img src="images/svc-carpet.jpg" alt="" loading="lazy">
         <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12a4 4 0 0 1 0 8H4zM16 8a4 4 0 0 0 0 8M7 11.500h6M7 14h6"/></svg></span>
         <div><h3>Carpet cleaning</h3><p>Truck mount and portable cleaning units for homes and commercial carpet. See prices and packages.</p></div>
       </a>
       <a class="tile t2" href="http://www.handmcarpetcare.com/Area-Rug-Cleaning-tips.html">
-        <img src="images/svc-rug.svg" alt="" loading="lazy">
+        <img src="images/svc-rug.jpg" alt="" loading="lazy">
         <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m12 8 4 4-4 4-4-4z"/></svg></span>
         <div><h3>Area rug cleaning</h3><p>Silk and wool rugs cleaned at our plant, with pick-up and delivery.</p></div>
       </a>
       <a class="tile t3" href="http://www.handmcarpetcare.com/Upholstery-Cleaning.html">
-        <img src="images/svc-upholstery.svg" alt="" loading="lazy">
+        <img src="images/svc-upholstery.jpg" alt="" loading="lazy">
         <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v4H3zM6 17v2M18 17v2"/></svg></span>
         <div><h3>Upholstery cleaning</h3><p>Professional certified furniture cleaning.</p></div>
       </a>
       <a class="tile t4" href="http://www.handmcarpetcare.com/Furnace-Duct-Cleaning.html">
-        <img src="images/svc-duct.svg" alt="" loading="lazy">
+        <img src="images/svc-duct.jpg" alt="" loading="lazy">
         <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h10M7 12h10M7 15h10"/></svg></span>
         <div><h3>Furnace &amp; duct cleaning</h3><p>Disinfectant applied to air ducts, for health.</p></div>
       </a>
       <a class="tile t5" href="http://www.handmcarpetcare.com/Pet-Odor-removal-tips-Carpet-cleaning-Edmonton-Cat.html">
-        <img src="images/svc-pet.svg" alt="" loading="lazy">
+        <img src="images/svc-pet.jpg" alt="" loading="lazy">
         <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="10" r="1.8"/><circle cx="12" cy="7" r="1.8"/><circle cx="17" cy="10" r="1.8"/><path d="M12 12c3 0 5 2.500 5 4.500S15 19 12 18c-3 1-5-.5-5-1.500S9 12 12 12z"/></svg></span>
         <div><h3>Pet odor &amp; stain removal</h3><p>Dog or cat urine odor control, plus red wine stain removal.</p></div>
       </a>
       <a class="tile t6" href="http://www.handmcarpetcare.com/Tile-Grout-Cleaning.html">
-        <img src="images/tile-grout.svg" alt="" loading="lazy">
+        <img src="images/tile-grout.jpg" alt="" loading="lazy">
         <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M12 3v18M3 12h18"/></svg></span>
         <div><h3>Tile &amp; grout cleaning</h3><p>Tile and grout cleaning.</p></div>
       </a>
       <a class="tile t7" href="http://www.handmcarpetcare.com/Flood-Drying-and-Restoration.html">
-        <img src="images/flood-services.svg" alt="" loading="lazy">
+        <img src="images/flood-services.jpg" alt="" loading="lazy">
         <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.500 6 11a6 6 0 0 1-12 0c0-4.500 6-11 6-11z"/></svg></span>
         <div><h3>Water damage flood services</h3><p>Edmonton and St. Albert.</p></div>
       </a>
       <a class="tile t8" href="http://www.handmcarpetcare.com/Services-Packages.html">
-        <img src="images/commercial.svg" alt="" loading="lazy">
+        <img src="images/commercial.jpg" alt="" loading="lazy">
         <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4h9v17M14 9h5v12M8 8h3M8 12h3M8 16h3M3 21h18"/></svg></span>
         <div><h3>Commercial carpet cleaning</h3><p>Offices, high rises and apartment halls.</p></div>
